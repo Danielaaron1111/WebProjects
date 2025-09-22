@@ -1,0 +1,165 @@
+/* RESET - Always start with this */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* STEP 1: HEADER - Use flex to put logo and text in a row */
+.header {
+    background-color: white;
+    padding: 20px;
+    display: flex;           /* Makes items go in a row */
+    align-items: center;     /* Centers items vertically */
+}
+
+.logo {
+    width: 40px;
+    height: 25px;
+    background-color: red;
+    margin-right: 15px;
+}
+
+.header-text {
+    display: flex;
+    gap: 20px;              /* Space between English and French */
+}
+
+/* STEP 2: HERO IMAGE - Just a big picture, no flex needed */
+.hero-image {
+    height: 300px;
+    background: linear-gradient(to bottom, lightblue, blue);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300"><rect fill="lightblue" width="800" height="300"/><polygon fill="white" points="0,300 200,100 400,150 600,80 800,120 800,300"/></svg>');
+    background-size: cover;
+}
+
+/* STEP 3: MAIN CONTENT CONTAINER */
+.container {
+    max-width: 1000px;      /* Don't get too wide */
+    margin: 0 auto;         /* Center the container */
+    background-color: white;
+    padding: 30px;
+}
+
+/* STEP 4: TITLE SECTION */
+.title-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title-section h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.title-section p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* STEP 5: WARNING BOX - Use flex for icon + text */
+.warning {
+    background-color: #fff3cd;
+    border: 2px solid orange;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 30px 0;
+    display: flex;           /* Icon and text in a row */
+    gap: 15px;              /* Space between icon and text */
+}
+
+.warning-icon {
+    color: red;
+    font-size: 20px;
+}
+
+/* STEP 6: TWO CARDS - Use flex to put them side by side */
+.two-cards {
+    display: flex;          /* Side by side */
+    gap: 30px;              /* Space between cards */
+    margin: 30px 0;
+}
+
+.card {
+    flex: 1;                /* Each card takes equal space */
+}
+
+.card-image {
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.trail-image {
+    background-color: green;
+}
+
+.safety-image {
+    background-color: brown;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.button {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* STEP 7: VISITING SECTION */
+.visiting-title {
+    font-size: 28px;
+    margin: 40px 0 20px 0;
+}
+
+/* STEP 8: GRID FOR 6 ITEMS - Use flex with wrap */
+.grid {
+    display: flex;          /* Items in rows */
+    flex-wrap: wrap;        /* Go to next line when needed */
+    gap: 30px;              /* Space between all items */
+}
+
+.grid-item {
+    flex: 1;                /* Grow to fill space */
+    min-width: 300px;       /* Don't get too narrow */
+}
+
+.grid-item h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* STEP 9: MOBILE - Stack everything vertically */
+@media (max-width: 768px) {
+    .two-cards {
+        flex-direction: column;  /* Stack cards vertically */
+    }
+    
+    .grid {
+        flex-direction: column;  /* Stack grid items vertically */
+    }
+    
+    .grid-item {
+        min-width: auto;         /* Remove minimum width */
+    }
+}

@@ -1,0 +1,114 @@
+:root {
+    --body: #475569;
+    --headings: #1e293b;
+    --accent: #db2777;
+    --border: #e2e8f0;
+    --background: #f5f5f5;
+    --white: #fff;
+}
+
+/* short hand properties: 
+flex-grow; greater than 0;
+is always on the child. parent: display
+flex always  */
+
+/* flex-shrink: always positive varios and 
+and alwaus require to be in the child parent */
+
+/* flex basis set initial size of a flex item
+before flex-grow or flex-shrink is applied.
+ you can use flex-grow, and flex-shrink unleas you set
+ these up to 0, also it can be  expressed
+ in px and rem LENGH, %, OR KEYWORD => 
+ THE INITIAL SIZE OF THE ITEM BEFORE SPACE IS DIS
+ TRIBUTED*/
+/* if you assign .item flex: 1 0 200px;, can be auto
+ */
+
+ /* Body */
+
+ body {
+    background-color: var(--background);
+    color: var(--body);
+    font-family: "Open Sans", sans-serif;
+ }
+ /* utility classes */
+
+ .inner-container {
+    margin: 3rem auto;
+    max-width: 1080px;
+    padding: 1rem;
+
+
+ }
+ .flex-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+ }
+
+ /* typhography */
+ h1,
+ h2 {
+    color: var(--headings);
+    font-size: 2.125rem;
+    font-weight: 300;
+    text-align: center;
+ }
+
+ h2 {
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+ }
+
+p {
+    margin-bottom: 1rem;
+}
+code {
+    color: var(--accent);
+
+}
+/* layout */
+
+header .inner-container {
+    align-items: center;
+    flex-flow: row nowrap;
+
+}
+.img-container {
+    flex: 1 8.5 15%;
+}
+
+h1 {
+    flex: 7 1 70%;
+}
+
+section,
+ aside {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2rem 1rem;
+
+    
+}
+@media (min-width: 640px) {
+    .flex-container{
+        flex-flow: row nowrap;
+    }
+    .img-container {
+        flex: 1 9 10%;
+    }
+    h1 {
+        flex: 1 9 80%;
+    }
+    section 
+    {
+        flex: 3 1 75%;
+        order: 1;
+    }
+    aside {
+        flex: 1 1 25%;
+    }
+
+}

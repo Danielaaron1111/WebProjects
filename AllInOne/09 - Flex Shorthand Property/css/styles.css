@@ -25,49 +25,53 @@ before flex-grow or flex-shrink is applied.
 /* if you assign .item flex: 1 0 200px;, can be auto
  */
 
- /* Body */
+/* Body */
 
- body {
+body {
     background-color: var(--background);
     color: var(--body);
     font-family: "Open Sans", sans-serif;
- }
- /* utility classes */
+}
 
- .inner-container {
+/* utility classes */
+
+.inner-container {
     margin: 3rem auto;
     max-width: 1080px;
     padding: 1rem;
 
 
- }
- .flex-container {
+}
+
+.flex-container {
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem;
- }
+}
 
- /* typhography */
- h1,
- h2 {
+/* typhography */
+h1,
+h2 {
     color: var(--headings);
     font-size: 2.125rem;
     font-weight: 300;
     text-align: center;
- }
+}
 
- h2 {
+h2 {
     font-weight: 400;
     margin-bottom: 1.5rem;
- }
+}
 
 p {
     margin-bottom: 1rem;
 }
+
 code {
     color: var(--accent);
 
 }
+
 /* layout */
 
 header .inner-container {
@@ -75,6 +79,7 @@ header .inner-container {
     flex-flow: row nowrap;
 
 }
+
 .img-container {
     flex: 1 8.5 15%;
 }
@@ -84,31 +89,44 @@ h1 {
 }
 
 section,
- aside {
+aside {
     background-color: var(--white);
     border: 1px solid var(--border);
     border-radius: 4px;
     padding: 2rem 1rem;
 
-    
+
 }
+
 @media (min-width: 640px) {
-    .flex-container{
+    .flex-container {
         flex-flow: row nowrap;
     }
+
     .img-container {
         flex: 1 9 10%;
     }
+
     h1 {
         flex: 1 9 80%;
     }
-    section 
-    {
+
+    section {
         flex: 3 1 75%;
         order: 1;
     }
+
     aside {
         flex: 1 1 25%;
     }
 
 }
+
+/*  flex-grow : How much the item can grow relative to others if there’s extra space.
+ flex-shrink : How much the item can shrink if space is tight.
+flex-basis : The item’s starting/default size before growing or shrinking, can be a length or the keyword  auto . */
+/* Column vertical, row horizontal */
+/* width and height /ancho y altura */
+/* shrink =  encoger
+wrap = envolver
+flex = flexible dobladura */

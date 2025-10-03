@@ -13,7 +13,7 @@ is always on the child. parent: display
 flex always  */
 
 /* flex-shrink: always positive varios and 
-and alwaus require to be in the child parent */
+and always require to be in the child parent */
 
 /* flex basis set initial size of a flex item
 before flex-grow or flex-shrink is applied.

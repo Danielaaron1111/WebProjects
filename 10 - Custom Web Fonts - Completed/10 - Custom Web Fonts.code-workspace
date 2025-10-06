@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../10 - Custom Web Fonts"
+		},
+		{
+			"path": "../retro_signature"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "10 - Custom Web Fonts"
+	}
+}

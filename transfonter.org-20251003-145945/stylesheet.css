@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'Retro Signature';
-    src: url('RetroSignatureRegular.woff2') format('woff2'),
-        url('RetroSignatureRegular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-

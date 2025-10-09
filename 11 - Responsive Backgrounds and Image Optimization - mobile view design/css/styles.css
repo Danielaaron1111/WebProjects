@@ -8,7 +8,7 @@
 
 /* We have on-page anchors in this demo and we may want our user's browser to smoothly scroll down the page rather than jumpimg */
 html {
-    scroll-behavior: var(--foggy-white);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -108,17 +108,4 @@ h3 {
 .card-body a {
     display: block;
     margin-top: 1rem;
-}
-
-/* Media Queries  */
-
-@media screen and (min-width: 720px)   {
- h1{ font-size: 3rem;
- }
-
- .latest-articles .flex-container {
-    align-items: stretch;
-    flex-flow:  row wrap;
- }
-
 }
